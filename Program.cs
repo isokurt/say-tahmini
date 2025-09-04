@@ -36,5 +36,23 @@ namespace sayı_tahmini
         int secilenZorlukSeviyesi = int.Parse (Console.ReadLine ());
         return (ZorlukDerecesi) (secilenZorlukSeviyesi - 1);
         }
+
+        static int PuanZorlukDerecesi (ZorlukDerecesi zorlukseviyesi)
+        {
+        if(zorlukseviyesi == ZorlukDerecesi.Kolay)
+        {
+        return 10;
+        }
+        if(zorlukseviyesi == ZorlukDerecesi.Normal)
+        {
+        return 20;
+        }
+        if(zorlukseviyesi == ZorlukDerecesi.Zor)
+        {
+        return 30;
+
+        }
+        return 50;
+        }
     }
 }
