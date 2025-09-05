@@ -15,7 +15,10 @@ namespace sayı_tahmini
     {
         static void Main(string[] args)
         {
-        ZorlukDerecesi zorlukSeviyesi = ZorlukDerecesiSecimi();
+            int rastgelesayi = RastgeleSayiUreticisi(100);
+            ZorlukDerecesi zorlukSeviyesi = ZorlukDerecesiSecimi();
+            int totaltahminhakki = TahminSayisiSiniri(zorlukSeviyesi);
+
 
         }
 
@@ -54,5 +57,24 @@ namespace sayı_tahmini
         }
         return 50;
         }
+
+        static int TahminSayisiSiniri(ZorlukDerecesi zorlukseviyesi)
+        {
+            if (zorlukseviyesi == ZorlukDerecesi.Kolay)
+            {
+                return 10;
+            }
+            if (zorlukseviyesi == ZorlukDerecesi.Normal)
+            {
+                return 7;
+            }
+            if (zorlukseviyesi == ZorlukDerecesi.Zor)
+            {
+                return 8;
+
+            }
+            return 10;
+        }
+
     }
 }
