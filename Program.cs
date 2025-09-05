@@ -76,5 +76,17 @@ namespace sayı_tahmini
             return 10;
         }
 
+        static void KullaniciGirdiKontrolu(string kullanicigirdi)
+        {
+            if (int.TryParse(kullanicigirdi,out int sayi))
+            {
+                Console.WriteLine($"Tahmininiz: {kullanicigirdi}");
+            }
+            else
+            {
+                Console.WriteLine("Tahmininiz geçerli değil, lütfen bir sayı giriniz.");
+            }
+        }
+
     }
 }
